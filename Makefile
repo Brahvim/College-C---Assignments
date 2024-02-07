@@ -5,8 +5,9 @@ SRC = ./src/Main.cpp
 TARGET = Main.out
 
 $(TARGET): $(SRC)
-	$(CC) $(CXXFLAGS) -o $@ $^
+	$(CXX) $(CXXFLAGS) -o $@ $^
 
 .PHONY: clean
+
 clean:
 	rm -f $(TARGET)
