@@ -51,4 +51,10 @@
     "C_Cpp.vcFormat.space.aroundAssignmentOperator": "insert",
     "C_Cpp.vcFormat.space.pointerReferenceAlignment": "ignore",
     "C_Cpp.vcFormat.space.aroundTernaryOperator": "insert",
+    "files.associations": {
+        "*.s": "asm-intel-x86-generic",
+        "*.asm": "asm-intel-x86-generic",
+        "*.luac": "lua",
+        "*.tcc": "cpp"
+    },
 }
