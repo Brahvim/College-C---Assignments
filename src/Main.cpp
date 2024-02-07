@@ -1,17 +1,8 @@
 #include <limits>
 #include <iostream>
 
-std::istream &clear_cin() {
-    // Make sure the buffer is empty!:
-    return std::cin.ignore(
-        // Go as far as a stream can go...:
-        // std::numeric_limits<std::streamsize>::max()
-        // std::cin.end - std::cin.beg,
-        1,
-        // ...to find this character!:
-        '\n'
-    );
-}
+/** @brief Make sure the buffer is empty! */
+#define clear_cin() std::cin.ignore(1, '\n');
 
 int main() {
     std::cout << "Do you know me? (Y/n)" << std::endl;
