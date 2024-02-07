@@ -55,7 +55,8 @@
         "*.s": "asm-intel-x86-generic",
         "*.asm": "asm-intel-x86-generic",
         "*.luac": "lua",
-        "*.tcc": "cpp"
+        "*.tcc": "cpp",
+        "ostream": "cpp"
     },
     "C_Cpp.default.compilerPath": "/usr/bin/g++",
 }

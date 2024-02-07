@@ -2,12 +2,20 @@
 #include <iostream>
 
 std::istream &clear_cin() {
-    return std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    // Make sure the buffer is empty!:
+    return std::cin.ignore(
+        // Go as far as a stream can go...:
+        // std::numeric_limits<std::streamsize>::max()
+        // std::cin.end - std::cin.beg,
+        1,
+        // ...to find this character!:
+        '\n'
+    );
 }
 
 int main() {
     std::cout << "Do you know me? (Y/n)" << std::endl;
-    std::cin.ignore(); // Make sure the buffer is empty!
+    clear_cin();
 
     // Using a `switch`-statement:
     switch (std::cin.get()) {
@@ -22,10 +30,10 @@ int main() {
 
     int uin_int = 0;
     std::cout << "Mind entering a `" << sizeof(int) << "`-byte integer?" << std::endl;
-    std::cin.ignore(); // Make sure the buffer is empty!
+    clear_cin();
     std::cin >> uin_int;
 
-    std::cout << "You mean `" << uin_int << "`?! Hey! Thanks!" << std::endl;
+    std::cout << "You mean `" << uin_int << "`?! Hey, thanks!" << std::endl;
 
     if (uin_int == 0) {
         std::cout << "I also see that it's zero!" << std::endl;
