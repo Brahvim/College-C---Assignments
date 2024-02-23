@@ -1,7 +1,6 @@
 #include "BrahvimIoStreamUtils.hpp"
 
 int main() {
-
     std::cout << "Please enter width of the rectangle: ";
     declare_then_get_via_cin(size_t, width);
 
@@ -12,5 +11,4 @@ int main() {
 
         std::cout << std::endl;
     }
-
 }

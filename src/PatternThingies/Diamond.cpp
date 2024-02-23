@@ -1,7 +1,6 @@
 #include "BrahvimIoStreamUtils.hpp"
 
 int main() {
-
     // std::cout << "Please enter the maximum width of the diamond: ";
     // declare_then_get_via_cin(size_t, max_width);
     size_t max_width = 4;
@@ -19,5 +18,4 @@ int main() {
 
         std::cout << std::endl;
     }
-
 }
