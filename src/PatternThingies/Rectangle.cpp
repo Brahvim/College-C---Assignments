@@ -1,4 +1,5 @@
 #include "BrahvimIoStreamUtils.hpp"
+#define PATTERN_CHAR '*'
 
 int main() {
     std::cout << "Please enter width of the rectangle: ";

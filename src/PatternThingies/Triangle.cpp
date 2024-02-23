@@ -1,4 +1,5 @@
 #include "BrahvimIoStreamUtils.hpp"
+#define PATTERN_CHAR '*'
 
 int main() {
     std::cout << "Please enter the width of the base of the triangle: ";
