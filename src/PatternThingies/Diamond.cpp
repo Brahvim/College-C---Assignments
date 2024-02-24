@@ -6,7 +6,13 @@ int main() {
     declare_then_get_via_cin(size_t, max_width);
 
     if (max_width == 2) {
-        std::cout << "Please enter the maximum width of the diamond: ";
+        std::cout << R"(
+  *
+ ***
+*****
+ ***
+  *
+        )";
         std::exit(0);
     }
 
