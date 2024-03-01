@@ -4,7 +4,7 @@
 // All methods are `inline`d so that old compilers need not worry.
 class IntPointer {
 
-    int *m_Pointer = nullptr;
+    int *pointer = nullptr;
 
 public:
 
@@ -14,46 +14,46 @@ public:
 
 #pragma region // Setters.
     inline void SetPointer(int *_Ptr) {
-        m_Pointer = _Ptr;
+        pointer = _Ptr;
     }
 
     inline void SetValue(int _Val) {
-        (*m_Pointer) = _Val;
+        (*pointer) = _Val;
     }
 #pragma endregion
 
 #pragma region // Getters.
     inline int* GetPointer() const { // This doesn't modify the class's members, and is thus `const`.
-        return m_Pointer;
+        return pointer;
     }
 
     inline int GetValue() const { // This doesn't modify the class's members, and is thus `const`.
-        return (*m_Pointer);
+        return (*pointer);
     }
 #pragma endregion
 
 #pragma region // Pointer status.
     inline bool IsDangling() const { // This doesn't modify the class's members, and is thus `const`.
-        return m_Pointer == nullptr;
+        return pointer == nullptr;
     }
 
     inline bool Exists() const { // This doesn't modify the class's members, and is thus `const`.
-        return m_Pointer != nullptr;
+        return pointer != nullptr;
     }
 #pragma endregion
 
 #pragma region // Memory management.
-    inline bool Allocate() {
+    inline bool allocate() {
         if (Exists())
             return false;
 
-        m_Pointer = new int;
+        pointer = new int;
         return true;
     }
 
     inline bool Free() {
         if (!Exists()) {
-            delete m_Pointer;
+            delete pointer;
             return true;
         }
 
@@ -67,7 +67,7 @@ int main() {
     IntPointer ptr;
     std::cout << "`ptr` as a `nullptr` points to: `" << ptr.GetPointer() << "`." << std::endl;
 
-    ptr.Allocate();
+    ptr.allocate();
     ptr.SetValue(5);
     std::cout << "`ptr` with an allocation points to: `" << ptr.GetPointer() << "`." << std::endl;
 

@@ -9,7 +9,7 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileBasenameNoExtension}.out",
+                "${workspaceFolder}/${fileBasenameNoExtension}.out",
                 "-I",
                 "${workspaceFolder}/include/"
             ],
