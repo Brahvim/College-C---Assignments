@@ -47,6 +47,6 @@ int main() {
     }
 
     // Want some bandages?:
-    std::cout << "***";
-    std::cout << "**";
+    // std::cout << "***";
+    // std::cout << "**";
 }
