@@ -24,10 +24,7 @@ public: // I leave the first line empty in classes, but C++ requires this keywor
     Person::name_t name;
     Person::nature_t nature;
 
-    Person(
-        Person::name_t p_name,
-        Person::age_t p_age,
-        Person::nature_t p_nature)
+    Person(Person::name_t p_name, Person::age_t p_age, Person::nature_t p_nature)
         : age(p_age), name(p_name), nature(p_nature) {
     }
 #pragma endregion 
