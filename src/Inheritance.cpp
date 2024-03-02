@@ -116,6 +116,7 @@ public:
 
 };
 
+// An `enemy` shall be an object that can access `public` members in an `entity`:
 class enemy : public entity {
 public:
     const static int tag = 0x02;
@@ -129,6 +130,7 @@ public:
 
 };
 
+// A `player` shall be an object that can access `public` members in an `entity`:
 class player : public entity {
 public:
     const static int tag = 0x01;
@@ -142,6 +144,10 @@ public:
 
 };
 
+// `enum class`es are a C++11 feature developed further in C++14 and C++17, which allows us
+// to use `enum`s from C with stronger typing and scoping - constants made with these are not global
+// variables, and are type safe; constants derived from one `enum class` cannot be assigned to an 'instance'
+// of another `enum class`.
 enum class game_flags : int {
     invalid = 0, enemy = 1, player = 2
 };
