@@ -141,7 +141,7 @@ public:
 };
 
 enum class game_flags : int {
-    invalid = 0, enemy = 1, player = 2;
+    invalid = 0, enemy = 1, player = 2
 };
 
 int main() {
