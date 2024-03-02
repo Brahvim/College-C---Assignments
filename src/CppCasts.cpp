@@ -7,7 +7,9 @@
 // Said 'unsafe operations', most of the time, are edge cases - ones that aren't realized until
 // a bug has actually occurred during testing.
 
-struct vec2 {
+struct vec { };
+
+struct vec2 : public vec {
 
     float x = 0; float y = 0;
 
@@ -60,7 +62,7 @@ int main() {
     // instance of it *for each cast we want to perform* is inconvenient and also performs slow. Thus we use the cast.
     // Here's an example:
     double d = 0;
-    (*reinterpret_cast<float*>(&d)) = 0xCAFEBABE;
+    (*reinterpret_cast<float*>(&d)) = 0xCAFEBABE; // (Performing the cast then dereferencing for assignment.)
     // Even `clang-tidy` (a linter; a 'static code analysis tool') offers the following
     // "`clang-diagnostic-implicit-const-int-float-conversion`" warning!:
     // ```bash
@@ -68,6 +70,20 @@ int main() {
     // ```
     // PS This bit-level manipulation practice is also called "type punning"!
 
-    //
+    // `dynamic_cast<>()` is used for type checking:
+    // vec *ptr = new vec3(1.0f, 2.0f, 3.0f);
+
+    // if (auto ptrVec3 = dynamic_cast<vec3*>(ptr)) {
+    //     clear_vec3(*ptrVec3);
+    // } else if (auto ptrVec2 = dynamic_cast<vec2*>(ptr)) {
+    //     clear_vec2(*ptrVec2);
+    // } else {
+    //     std::cout << "Unknown type!" << std::endl;
+    // }
+
+    // All-in-all a `dynamic_cast<>()` acts like Java's `instanceof` operator.
+    // The reason the code is commented out is that the compiler does not allow it:
+    // `vec` is not a "polymorphic" type - no V-table is generated for it. It doesn't have `virtual` methods.
+    // ...Which brings to mind, a property of `dynamic_cast()<>`s - **they can be used only for polymorphic types**.
 
 }
