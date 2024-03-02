@@ -66,5 +66,8 @@ int main() {
     // ```bash
     // implicit conversion from 'unsigned int' to 'float' changes value from 3405691582 to 3405691648
     // ```
+    // PS This bit-level manipulation practice is also called "type punning"!
+
+    //
 
 }
