@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+#include <chrono>
+#include <thread>
 
 union vec3 {
     float as_array[3];
@@ -144,6 +146,18 @@ enum class game_flags : int {
     invalid = 0, enemy = 1, player = 2
 };
 
+void sleep_for_ms(const size_t p_millis) {
+    std::this_thread::sleep_for(std::chrono::milliseconds(p_millis));
+}
+
+void sleep_for_ns(const size_t p_millis) {
+    std::this_thread::sleep_for(std::chrono::nanoseconds(p_millis));
+}
+
+void sleep_for_s(const size_t p_millis) {
+    std::this_thread::sleep_for(std::chrono::seconds(p_millis));
+}
+
 int main() {
     player hero;
     std::cout
@@ -152,7 +166,11 @@ int main() {
         << "` health points."
         << std::endl;
 
-    hero.and_flag(static_cast<int>(game_flags::player));
+    sleep_for_s(1);
+
+    std::cout << "(This program continues as you press `Enter`.)" << std::endl;
+
+    std::cin.ignore();
 
     enemy e1, e2;
     std::cout
@@ -161,18 +179,24 @@ int main() {
         << "` and `"
         << e2.get_health()
         << "` health points have appeared!" << std::endl;
+    std::cin.ignore();
 
     hero.attempt_attack(e1);
     std::cout << "Hero attacked the first!" << std::endl;
     std::cout << "The first enemy has `" << e1.get_health() << "` health!" << std::endl;
+    std::cin.ignore();
 
     e2.attempt_attack(hero);
     std::cout << "Other enemy attacked the hero!" << std::endl;
     std::cout << "The hero has `" << hero.get_health() << "` health!" << std::endl;
+    std::cin.ignore();
 
     hero.attempt_attack(e2);
     std::cout << "Hero attacked the second!" << std::endl;
     std::cout << "The second enemy has `" << e2.get_health() << "` health!" << std::endl;
+    std::cin.ignore();
 
     std::cout << "The hero has won and survived." << std::endl;
+    std::cout << "(Press any key to exit.)";
+    std::cin.ignore();
 }
