@@ -1,7 +1,8 @@
 #include <iostream>
-// By the way - I'm following the Microsoft naming convention here.
 
-// All methods are `inline`d so that old compilers need not worry.
+// By the way - I'm following the Microsoft naming convention here.
+// All methods are inlined so that old compilers need not worry.
+
 class IntPointer {
 
     int *pointer = nullptr;

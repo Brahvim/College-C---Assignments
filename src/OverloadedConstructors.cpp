@@ -1,9 +1,10 @@
 #include <iostream>
 #include <iomanip>
+
 // By the way - I'm following my own naming convention here,
 // which I've developed over the years writing code in some languages, mainly Java.
-
 // All methods are `inline`d so that old compilers need not worry.
+
 class IntPointer {
 
     int *pointer = nullptr;
