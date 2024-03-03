@@ -56,7 +56,8 @@
         "cinttypes": "cpp",
         "typeinfo": "cpp",
         "ios": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "sstream": "cpp"
     },
     // region Visual C formatter settings:
     "C_Cpp.vcFormat.indent.caseContents": false,
