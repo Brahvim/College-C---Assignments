@@ -30,6 +30,4 @@ int main() {
     exit_if_closed(writer, "Uh-oh...");
     writer << "My name is Brahvim!" << std::endl;
     writer.close();
-
-    exit_if_closed(writer, "AYO!");
 }
