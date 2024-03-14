@@ -36,11 +36,8 @@ int main() {
     std::cout << "File contents!:" << std::endl;
     std::cout << "---------------" << std::endl;
 
-    while (reader) { // ...If we have something to read, READ!!!:
-        std::string line;
-        reader >> line;
-        std::cout << line << ' ';
-    }
+    if (reader)  // ...If we have something to read, READ!!!:
+        std::cout << reader.rdbuf() << std::endl;
     std::cout << std::endl;
 
     reader.close();
