@@ -56,9 +56,12 @@
         "cinttypes": "cpp",
         "typeinfo": "cpp",
         "ios": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "fstream": "cpp",
+        "sstream": "cpp",
+        "any": "cpp"
     },
-    // region Visual C formatter settings:
+    // #region Visual C formatter settings:
     "C_Cpp.vcFormat.indent.caseContents": false,
     "C_Cpp.vcFormat.newLine.beforeCatch": false,
     "C_Cpp.vcFormat.indent.braces": false,
@@ -111,6 +114,6 @@
     "C_Cpp.vcFormat.space.aroundAssignmentOperator": "insert",
     "C_Cpp.vcFormat.space.pointerReferenceAlignment": "ignore",
     "C_Cpp.vcFormat.space.aroundTernaryOperator": "insert",
+    // #endregion
     "sonarlint.pathToCompileCommands": "${workspaceFolder}/compile_commands.json",
-    // endregion
 }

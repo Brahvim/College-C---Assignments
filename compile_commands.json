@@ -1,0 +1,7 @@
+[
+    {
+        "command": "g++ -std=c++23 -Wall -o FileOutputStream.out src/FileOutputStream.cpp",
+        "directory": "/home/brahvim/Documents/CollegeThings/Semester4/College-Cpp-Assignments",
+        "file": "/home/brahvim/Documents/CollegeThings/Semester4/College-Cpp-Assignments/src/FileOutputStream.cpp"
+    }
+]

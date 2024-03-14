@@ -1,8 +1,8 @@
 CC = g++
 CXXFLAGS = -std=c++23 -Wall
 
-SRC = ./src/Main.cpp
-TARGET = Main.out
+SRC = ./src/FileOutputStream.cpp
+TARGET = FileOutputStream.out
 
 $(TARGET): $(SRC)
 	$(CXX) $(CXXFLAGS) -o $@ $^
