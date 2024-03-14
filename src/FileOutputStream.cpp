@@ -1,9 +1,7 @@
-#include <type_traits>
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <tuple>
-#include <any>
 
 void exit_if_closed(const std::ifstream &p_stream, const std::string_view &p_message) {
     if (p_stream.is_open())
