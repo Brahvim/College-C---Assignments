@@ -25,7 +25,25 @@ int main() {
     std::ifstream reader("example.txt");
     std::ofstream writer("example.txt");
 
-    exit_if_closed(writer, "Uh-oh...");
+    // If the stream couldn't be opened, exit!:
+    exit_if_closed(reader, "The reader went, \"Uh-oh!\"...");
+    exit_if_closed(writer, "The writer went, \"Uh-oh!\"...");
+
     writer << "My name is Brahvim!" << std::endl;
+    writer << "A is for Apple!" << std::endl;
     writer.close();
+
+    std::cout << "File contents!:" << std::endl;
+    std::cout << "---------------" << std::endl;
+
+    while (reader) { // ...If we have something to read, READ!!!:
+        std::string line;
+        reader >> line;
+        std::cout << line << ' ';
+    }
+    std::cout << std::endl;
+
+    reader.close();
+    std::cout << "---------------------------" << std::endl;
+    std::cout << "(File contents have ended.)" << std::endl;
 }
