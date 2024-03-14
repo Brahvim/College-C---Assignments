@@ -25,8 +25,6 @@ int main() {
     std::ifstream reader("example.txt");
     std::ofstream writer("example.txt");
 
-    writer.close();
-
     exit_if_closed(writer, "Uh-oh...");
     writer << "My name is Brahvim!" << std::endl;
     writer.close();
