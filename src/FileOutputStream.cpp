@@ -38,7 +38,6 @@ int main() {
 
     if (reader)  // ...If we have something to read, READ!!!:
         std::cout << reader.rdbuf() << std::endl;
-    std::cout << std::endl;
 
     reader.close();
     std::cout << "---------------------------" << std::endl;
