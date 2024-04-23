@@ -9,13 +9,14 @@ const bool g_should_print = rand() % 2 == 0;
 // ...
 // Veeery simple (AND SLOW!) `std::string` passed-by-value!
 inline void print_global(std::string p_data) { // cppcheck-suppress passedByValue
-	// if (g_should_print)
-	std::cout << p_data << std::endl;
+	if (g_should_print)
+		std::cout << p_data << std::endl;
 }
 
 // Will be inlined even without the hint! It's a quite simple function after all!:
 inline void print(std::string p_data) { // cppcheck-suppress passedByValue
 	std::cout << p_data << std::endl;
+	print(p_data);
 }
 
 int main() {
