@@ -14,7 +14,11 @@ set(include_dir "${PROJECT_SOURCE_DIR}/include")
 file(GLOB cpp_files "${src_dir}/*.cpp")
 file(GLOB hpp_files "${include_dir}/*.hpp")
 
-# Build commands:
+# Build target settings:
 include_directories(${include_dir})
 add_executable(CollegeAdvancedCpp ${hpp_files} ${cpp_files})
 target_compile_features(CollegeAdvancedCpp PUBLIC cxx_std_23)
+
+target_compile_options(CollegeAdvancedCpp PUBLIC "-Winline" "-save-temps")
+# set_target_properties(CollegeAdvancedCpp PROPERTIES COMPILE_OPTIONS
+# "-save-temps")

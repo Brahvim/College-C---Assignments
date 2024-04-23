@@ -111,6 +111,6 @@
     "C_Cpp.vcFormat.space.aroundAssignmentOperator": "insert",
     "C_Cpp.vcFormat.space.pointerReferenceAlignment": "ignore",
     "C_Cpp.vcFormat.space.aroundTernaryOperator": "insert",
-    "sonarlint.pathToCompileCommands": "${workspaceFolder}/compile_commands.json",
+    "sonarlint.pathToCompileCommands": "${workspaceFolder}/build/compile_commands.json",
     // endregion
 }
