@@ -16,7 +16,6 @@ inline void print_global(std::string p_data) { // cppcheck-suppress passedByValu
 // Will be inlined even without the hint! It's a quite simple function after all!:
 inline void print(std::string p_data) { // cppcheck-suppress passedByValue
 	std::cout << p_data << std::endl;
-	print(p_data);
 }
 
 int main() {
