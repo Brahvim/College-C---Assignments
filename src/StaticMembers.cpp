@@ -5,7 +5,7 @@ class person {
 private:
 #pragma region // Fields.
 #pragma region // Static members.
-	static size_t s_instance_count; // Prefixing `s_` is a naming convention for static symbols for many.
+	static size_t s_instance_count = 0; // Prefixing `s_` is a naming convention for static symbols for many.
 	// The symbols need not be *`static` class members* specifically!
 #pragma endregion
 
