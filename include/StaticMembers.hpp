@@ -16,15 +16,16 @@ private:
 #pragma endregion
 
 public:
-    person(std::string p_name, int p_age) // cppcheck-suppress passedByValue
-        : name(p_name), age(p_age) {
-    }
+    person(std::string name, int age);
 
 #pragma region // Static methods.
     static person create_null();
 
     static size_t instance_count();
 #pragma endregion
+
+    // `std::cout::<<` overload:
+    friend std::ostream& operator<<(std::ostream& output_stream, const person& person);
 
 #pragma region // Getters.
     unsigned int get_age() const;
@@ -33,9 +34,9 @@ public:
 #pragma endregion
 
 #pragma region // Setters.
-    void set_age(unsigned int p_new_age);
+    void set_age(unsigned int new_age);
 
-    void set_name(const std::string p_new_name); // cppcheck-suppress passedByValue
+    void set_name(const std::string new_name); // cppcheck-suppress passedByValue
 #pragma endregion
 
 };

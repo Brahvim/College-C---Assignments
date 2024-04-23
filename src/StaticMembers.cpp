@@ -3,8 +3,13 @@
 // Need to initialize this, ...here???!!:
 size_t person::s_instance_count = 0;
 
-// person::person(std::string p_name, int p_age): name(p_name), age(p_age) { // cppcheck-suppress passedByValue
-// }
+person::person(std::string p_name, int p_age)
+	: name(p_name), age(p_age) {
+	++s_instance_count; // Use the prefixed one.
+	// The postfix one creates a copy.
+	// Obviously your compiler optimizes it! But...
+	// REMEMBER MIKE ACTON'S 2014 TALK!
+}
 
 #pragma region // Static methods.
 person person::create_null() {
@@ -40,5 +45,8 @@ int main() {
 	const person person1("Brahvim", 17);
 	const person person2 = person::create_null();
 
-	std::cout << "Number of people: " << person::person::instance_count() << std::endl;
+	std::cout << "Population: " << person::person::instance_count() << std::endl;
+	std::cout << "People: " << std::endl;
+	std::cout << person1 << std::endl;
+	std::cout << person2 << std::endl;
 }
