@@ -111,6 +111,6 @@
     "C_Cpp.vcFormat.space.aroundAssignmentOperator": "insert",
     "C_Cpp.vcFormat.space.pointerReferenceAlignment": "ignore",
     "C_Cpp.vcFormat.space.aroundTernaryOperator": "insert",
-    "sonarlint.pathToCompileCommands": "${workspaceFolder}/build/compile_commands.json",
+    "cmake.sourceDirectory": "/home/brahvim/Code/C++/College-Cpp-Assignments/Inline",
     // endregion
 }
