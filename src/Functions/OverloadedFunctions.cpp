@@ -24,7 +24,7 @@ int main() {
     print(5);
     print();
 
-    const float sum = print(3.5f, 2); // Explicit casting took place on `2` here.
+    const float sum = print(3.5f, 2); // Explicit casting took place for `2` here.
     print();
     print(sum);
 }
