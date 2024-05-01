@@ -5,6 +5,6 @@ using namespace std;
 
 int main() {
     string names[] = { "Brahvim", "Sheetal", "Karan", "Junaid", "Utkarsh" };
-    for (auto &s : names)
+    for (auto &s : names) // I prefer references.
         cout << s;
 }
