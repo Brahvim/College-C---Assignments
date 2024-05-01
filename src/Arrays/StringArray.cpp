@@ -5,5 +5,5 @@ using namespace std;
 
 int main() {
     string cars[] = { "BMW", "Ferrari", "Ford", "Rolls Royce" };
-    cout << cars[1];
+    cout << cars[1] << endl;
 }
