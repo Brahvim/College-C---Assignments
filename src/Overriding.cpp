@@ -72,7 +72,7 @@ int main() {
     shape *shape1 = &sq1;
     shape *shape2 = &circ1;
 
-    // (Attempting a `dynamic_cast<>*()` from a pointer to another within a hierarchy:)
+    // (Attempting a `dynamic_cast<>()` from a pointer to another within a hierarchy:)
     square *sq_ptr = dynamic_cast<square*>(shape1);
     circle *circ_ptr = dynamic_cast<circle*>(shape2);
 
