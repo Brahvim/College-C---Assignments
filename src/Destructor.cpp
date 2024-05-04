@@ -44,7 +44,7 @@ public:
 #pragma endregion
 
 #pragma region // Memory management.
-    inline bool allocate() {
+    inline bool Allocate() {
         if (Exists())
             return false;
 
@@ -68,7 +68,7 @@ int main() {
     IntPointer ptr;
     std::cout << "`ptr` as a `nullptr` points to: `" << ptr.GetPointer() << "`." << std::endl;
 
-    ptr.allocate();
+    ptr.Allocate();
     ptr.SetValue(5);
     std::cout << "`ptr` with an allocation points to: `" << ptr.GetPointer() << "`." << std::endl;
 
