@@ -16,7 +16,7 @@ public:
 
     // This is a "pure virtual method" - one that must be overriden by a subclass to be called at all.
     // This also means that `shape` is now completely impossible to instantiate!
-    virtual void scale(const float p_amount) = 0;
+    virtual void scale(const float amount) = 0;
 
 };
 
